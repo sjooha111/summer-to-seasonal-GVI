@@ -1,0 +1,35 @@
+# Planning / admin files (not for public repo)
+git_upload_plan.md
+_gen_notebook.py
+_gen_notebook_02.py
+
+# Results and working outputs
+results/
+*.json
+batch_input*.jsonl
+uri_cache*.json
+
+# Large data files
+data/**/*.csv
+!data/sample/metadata_sample.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# API keys / secrets
+.env
+secrets.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
