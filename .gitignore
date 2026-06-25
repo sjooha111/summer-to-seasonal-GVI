@@ -1,10 +1,6 @@
 # Planning / admin files (not for public repo)
-git_upload_plan.md
-git_upload_readme_plan.md
-git_upload_gsvdownload_plan.md
-_gen_notebook.py
-_gen_notebook_01.py
-_gen_notebook_02.py
+git_upload_*.md
+_gen_notebook*.py
 
 # Results and working outputs
 results/
@@ -15,6 +11,12 @@ uri_cache*.json
 # Large data files
 data/**/*.csv
 !data/sample/metadata_sample.csv
+
+# Working media (root copies; canonical versions live in assets/)
+/ay_gvi.gif
+/ay_gvi2.gif
+/framework.png
+/seasonalGVI.mp4
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
