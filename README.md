@@ -15,8 +15,9 @@ ACM SIGSPATIAL 2026 Application Track
 - **Input imagery:** 38,640 street-view images collected across 9,660 road points at 30 m intervals in **August 2023**
 - **Summer (observed):** GVI directly computed from August 2023 street-view imagery via semantic segmentation
 - **Spring / Fall / Winter (predicted):** GVI estimated by the proposed zero-shot MLLM framework (Gemini 2.5 Flash, Structured CoT, GVI+IMG+LOC+VEG) using summer imagery alone as input
+  
+🗺️ Interactive map: [ArcGIS Experience Builder](https://experience.arcgis.com/experience/1075add9d1384f1d861f949a38bc0e9c)
 
-Interactive map: [ArcGIS Experience Builder](https://experience.arcgis.com/experience/1075add9d1384f1d861f949a38bc0e9c)
 
 ## Framework Overview
 
