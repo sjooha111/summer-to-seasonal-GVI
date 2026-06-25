@@ -1,11 +1,13 @@
 # Seasonal GVI Estimation Without Seasonal Imagery: A Zero-Shot MLLM Framework for Urban Greenery Assessment
-ACM SIGSPATIAL 2026
+ACM SIGSPATIAL 2026 Application Track
 
 ---
 
+## Application
+
 **GVI (Green View Index)** is the share of vegetation pixels in a street-level image, representing greenery visibility from a pedestrian viewpoint (0 = no vegetation, 1 = fully vegetated).
 
-![Anyang Seasonal GVI](assets/anyang_seasonal_gvi.gif)
+<img src="assets/anyang_seasonal_gvi.gif" width="800" alt="Anyang Seasonal GVI">
 
 *Seasonal GVI map of Anyang, South Korea — spring / summer / fall / winter*
 
@@ -16,17 +18,15 @@ ACM SIGSPATIAL 2026
 
 Interactive map: [ArcGIS Experience Builder](https://experience.arcgis.com/experience/1075add9d1384f1d861f949a38bc0e9c)
 
----
-
 ## Overview
+
+<img src="assets/framework.png" width="1000" alt="Framework">
 
 Estimates spring, fall, and winter GVI from summer street-level images using Gemini 2.5 Flash (zero-shot).
 
 1. Collect Google Street View summer images — `01_gsv_collection.ipynb`
 2. Compute summer GVI via Mask2Former segmentation — `02_segmentation_gvi.ipynb`
 3. Estimate seasonal GVI using Gemini Batch API — `03_inference_batch.ipynb`
-
----
 
 ## Repository Structure
 
@@ -43,10 +43,9 @@ Estimates spring, fall, and winter GVI from summer street-level images using Gem
 ├── data/sample/
 │   └── metadata_sample.csv
 └── assets/
-    └── anyang_seasonal_gvi.gif
+    ├── anyang_seasonal_gvi.gif
+    └── framework.png
 ```
-
----
 
 ## Requirements
 
@@ -61,8 +60,6 @@ pip install streetview geopandas shapely requests tqdm \
 - Google Maps API key required for `01_gsv_collection.ipynb`
 - Gemini API key required for `03_inference_batch.ipynb`
 
----
-
 ## Usage
 
 **Step 1.** `notebooks/01_gsv_collection.ipynb` — set `SHP_PATH` and `GOOGLE_MAPS_API_KEY` in the CONFIG cell.
@@ -73,8 +70,6 @@ pip install streetview geopandas shapely requests tqdm \
 
 A 9-row sample is included at `data/sample/metadata_sample.csv`.  
 GSV images are not included (Google Terms of Service).
-
----
 
 ## Data
 
@@ -88,8 +83,6 @@ GSV images are not included (Google Terms of Service).
 | `GVI` | Summer GVI (0–1) |
 | `class_4_tree` … `class_72_palm` | Vegetation class pixel ratios |
 | `filepath` | Local image path |
-
----
 
 ## Prompts
 
